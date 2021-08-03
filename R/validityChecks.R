@@ -374,8 +374,8 @@
                 stop(paste("Only one 'colour_by' entry allowed",
                             "when selecting a 'colData(object)' slot."))
             }
-            if(all(colour_by %in% rownames(object)) && length(colour_by) > 6L){
-                stop(paste("Only six 'colour_by' entries",
+            if(all(colour_by %in% rownames(object)) && length(colour_by) > 7L){
+                stop(paste("Only seven 'colour_by' entries",
                             "allowed when selecting marker expression."))
             }
         }
@@ -390,8 +390,8 @@
         if(!all(colour_by %in% channelNames(image))){
             stop("'colour_by' not in 'channelNames(image)' slot.")
         }
-        if(length(colour_by) > 6L){
-            stop("Only six 'colour_by' entries allowed.")
+        if(length(colour_by) > 7L){
+            stop("Only seven 'colour_by' entries allowed.")
         }
     }
 }
